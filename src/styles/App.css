@@ -1,0 +1,46 @@
+.App {
+  height: 100%;
+  padding-top: 10px;
+  font-family: Lato, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #65C18C;
+}
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.calculator-logo {
+  height: 150px;
+  border-radius: 55%;
+  padding: 15px;
+}
+.title-logo {
+  font-size: 2rem;
+  padding: 25px;
+}
+.container-calculator {
+  height: 600px;
+  width: 400px;
+  padding: 14px;
+  margin-bottom: 25px;
+  background-image: url(../images/background-calc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  border: 2px solid white ;
+
+}
+.row-calculator {
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
