@@ -5,12 +5,20 @@ import { Boton } from './components/Boton';
 import { Pantalla } from './components/Pantalla.js'
 import { BotonClear }from './components/BotonClear';
 import { useState } from 'react';
+import { evaluate } from 'mathjs';
 
 function App() {
   const [entrada, setEntrada] = useState("");
 
   const agregarInput = val => {
     setEntrada(entrada + val);
+  }
+  const calculateResult = () => {
+    if (entrada){
+      setEntrada(evaluate(entrada))
+    }else {
+      setEntrada("Type a number")
+    }
   }
   return (
     <div className='App'>
@@ -44,7 +52,7 @@ function App() {
           <Boton handleClick={agregarInput}>*</Boton>
         </div>
         <div className='row-calculator'>
-          <Boton handleClick={agregarInput}>=</Boton>
+          <Boton handleClick={calculateResult}>=</Boton>
           <Boton handleClick={agregarInput}>0</Boton>
           <Boton handleClick={agregarInput}>.</Boton>
           <Boton handleClick={agregarInput}>/</Boton>
